@@ -35,7 +35,11 @@ Location of the APT repo folder relative to the Git repo root. The APT repositor
 
 **update_directory**
 
-Location of the update folder relative to the Git repo root. Packages placed in this directory and committed will automatically be added to the repository and deleted from this folder when the action runs. Defaults to "updates" if not specified.
+Location of the update folder relative to the Git repo root.  If the name
+starts with `/` it is assumed to be an absolute path.  Packages placed in this
+directory and committed will automatically be added to the repository and
+deleted from this folder when the action runs. Defaults to "updates" if not
+specified.
 
 **private_key**
 

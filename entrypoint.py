@@ -79,8 +79,12 @@ if __name__ == "__main__":
     logging.info("-- Done cloning current Github page --")
 
     # Set directories
-    update_dir = os.path.abspath(os.path.join(github_slug, update_folder))
     apt_dir = os.path.abspath(os.path.join(github_slug, apt_folder))
+
+    if update_folder[0] == '/':
+        update_dir = update_folder
+    else:
+        update_dir = os.path.abspath(os.path.join(github_slug, update_folder))
 
     # Prepare key
 
