@@ -30,7 +30,7 @@ if __name__ == "__main__":
         "INPUT_GIT_COMMIT_MESSAGE",
         "[apt-action] Update apt repo with last pushed updates.",
     )
-    git_push_branch = os.environ.get("INPUT_GIT_PUSH_BRANCH", "master")
+    git_push_branch = os.environ.get("INPUT_GIT_PUSH_BRANCH", "main")
 
     apt_folder = os.environ.get("INPUT_REPO_DIRECTORY", "apt")
     update_folder = os.environ.get("INPUT_UPDATE_DIRECTORY", "updates")

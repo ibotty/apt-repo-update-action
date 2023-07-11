@@ -1,5 +1,5 @@
 # apt-repo-update
-GitHub action to automatically update an apt repository (located in the master branch) with new packages.
+GitHub action to automatically update an apt repository (located in the main branch) with new packages.
 
 Very loosely based on https://github.com/jrandiny/apt-repo-action
 
@@ -19,7 +19,7 @@ Message used when committing to git repo. Defaults to "[apt-action] Update apt r
 
 **git_push_branch**
 
-Git repo branch to push to. Defaults to "master" if not specified.
+Git repo branch to push to. Defaults to "main" if not specified.
 
 **repo_supported_arch**
 
@@ -52,9 +52,9 @@ name: Publish new packages.
 
 # Controls when the action will run.
 on:
-  # Triggers the workflow on push events but only for the master branch
+  # Triggers the workflow on push events but only for the main branch
   push:
-    branches: [ master ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

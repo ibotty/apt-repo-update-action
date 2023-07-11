@@ -14,7 +14,7 @@ inputs:
   git_push_branch:
     description: "Git branch to push to."
     required: false
-    default: "master"
+    default: "main"
   repo_supported_arch:
     description: "Newline-delimited list of supported architectures."
     required: true
