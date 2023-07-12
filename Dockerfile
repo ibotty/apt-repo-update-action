@@ -1,6 +1,6 @@
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
-LABEL maintainer="Alistair Young <avatar@arkane-systems.net>"
+LABEL maintainer="Tobias Florek <me@ibotty.net>"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
