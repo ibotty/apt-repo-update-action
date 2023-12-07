@@ -15,7 +15,11 @@ inputs:
     description: "Git branch to push to."
     required: false
     default: "main"
-  repo_supported_arch:
+  git_repopository:
+    description: "Git repository where the APT repository lives."
+    required: false
+    default: ""
+  repo_supported_arch::
     description: "Newline-delimited list of supported architectures."
     required: true
   repo_supported_distro:

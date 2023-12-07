@@ -24,7 +24,7 @@ if __name__ == "__main__":
     supported_arch = os.environ.get("INPUT_REPO_SUPPORTED_ARCH")
     supported_distro = os.environ.get("INPUT_REPO_SUPPORTED_DISTRO")
 
-    github_repo = os.environ.get("GITHUB_REPOSITORY")
+    github_repo = os.environ.get("INPUT_GIT_REPOSITORY") or os.environ.get("GITHUB_REPOSITORY")
 
     git_commit_message = os.environ.get(
         "INPUT_GIT_COMMIT_MESSAGE",
