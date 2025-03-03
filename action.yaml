@@ -19,7 +19,7 @@ inputs:
     description: "Git repository where the APT repository lives."
     required: false
     default: ""
-  repo_supported_arch::
+  repo_supported_arch:
     description: "Newline-delimited list of supported architectures."
     required: true
   repo_supported_distro:
