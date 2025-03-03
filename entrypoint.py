@@ -1,14 +1,10 @@
 import os
 import git
 import gnupg
-import json
 import logging
 import pathlib
-import re
 import shutil
 import sys
-
-from debian.debfile import DebFile
 
 debug = os.environ.get("INPUT_DEBUG", False)
 
