@@ -38,7 +38,7 @@ inputs:
     required: true
   key_passphrase:
     description: "Passphrase of GPG private key"
-    required: true
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
