@@ -20,7 +20,9 @@ if __name__ == "__main__":
     supported_arch = os.environ.get("INPUT_REPO_SUPPORTED_ARCH")
     supported_distro = os.environ.get("INPUT_REPO_SUPPORTED_DISTRO")
 
-    github_repo = os.environ.get("INPUT_GIT_REPOSITORY") or os.environ.get("GITHUB_REPOSITORY")
+    github_repo = os.environ.get("INPUT_GIT_REPOSITORY") or os.environ.get(
+        "GITHUB_REPOSITORY"
+    )
 
     git_commit_message = os.environ.get(
         "INPUT_GIT_COMMIT_MESSAGE",
@@ -66,12 +68,15 @@ if __name__ == "__main__":
 
     logging.debug(git_refs_name)
 
+    logging.debug("-- Checking out branch")
+    git_repo.git.checkout(git_push_branch)
+
     logging.info("-- Done cloning current Github page --")
 
     # Set directories
     apt_dir = os.path.abspath(os.path.join(github_slug, apt_folder))
 
-    if update_folder[0] == '/':
+    if update_folder[0] == "/":
         update_dir = update_folder
     else:
         update_dir = os.path.abspath(os.path.join(github_slug, update_folder))
